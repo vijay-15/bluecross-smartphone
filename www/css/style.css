@@ -1,0 +1,146 @@
+* {
+  font-family: "Roboto" !important;
+}
+
+a.item {
+	padding: 10px !important;
+}
+
+a.item i {
+	padding-right: 30px !important;
+} 
+
+.highlight{
+  color:#4a87ee !important;
+}
+
+.popup-container .popup {
+	background-color: #FFF !important;
+}
+
+.popup-container input {
+	border-bottom: 1px solid #CCC;
+}
+
+.side-menu a {
+  padding: 20px !important;
+}
+
+.button-light {
+  background: transparent !important;
+  color: #000 !important;
+}
+
+
+.content-title {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 300 !important;
+}
+
+.lighten {
+  opacity: 0.2;
+}
+
+
+.complaint-card {
+  border-left: 2px solid;
+}
+
+.complaint-card-title {
+  margin: 0 !important;
+}
+
+.complaint-card-title span {
+  color: #CCC;
+}
+
+.complaint-card p span {
+  color: #5C5C5C !important;
+}
+
+.complaint-card img {
+  width: 100%;
+}
+
+.complaint-input .input-label {
+  padding: 0px 0px !important;
+}
+
+/* .camera-card {
+  height: 100px;
+} */
+
+.camera-card h5 {
+  font-family: "Roboto" !important;
+  font-weight: 300 !important;
+  /* margin-top: 30px !important; */
+}
+
+.camera-card i {
+  margin-right: 10px !important;
+}
+
+.rescued {
+  border-left-color: #27ae60 !important;
+}
+
+.registered {
+  border-left-color: #d35400 !important;
+} 
+
+.on-progress {
+  border-left-color: #f39c12 !important;
+}
+
+label .item {
+  border-bottom: 1px solid #CCC;
+}
+
+/* Date-picker */
+.popup {
+    width: 90% !important;
+  }
+
+.mdl-button__ripple-container {
+    display: none !important;
+  }
+
+.today {
+    background: transparent !important;
+  }
+.button-aaa {
+  color: #8a6de9 !important;
+}
+.user_cover{
+  opacity:.8; #8a6de9;
+  background-size:cover;
+  height:100px;
+  width:40%;
+  opacity:1 !important;
+}
+.profile{
+  background: url("http://images6.fanpop.com/image/photos/33600000/Cute-Dog-dogs-33698322-1024-768.jpg") center ;
+  background-size: cover;
+  opacity:.2;
+  position: absolute;
+  height: 150px !important;
+  width: 100% !important;
+}
+.image{
+  width: 100% !important;
+  height: 100px;
+}
+.background{
+  background-color: #E4E2E2;
+}
+.ion-android-call:before {
+    margin-right: 10px;
+}
+.map{
+  background-image: url("http://i.imgur.com/tET5Fwi.png?1");
+  height:380px;
+}
+.bar-royal, .button-royal{
+  background-color: #0779BE !important;
+  color: #FFF !important;
+}

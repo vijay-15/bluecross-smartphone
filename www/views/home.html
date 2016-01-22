@@ -1,0 +1,76 @@
+<ion-view view-title="Adoption" cache-view="true" enable-menu-with-back-views="false">
+    <ion-nav-buttons side="left">
+      <button menu-toggle="left" class="button icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button ng-controller="utils" on-tap="go('complaint')" class="button icon ion-android-camera"></button>
+    </ion-nav-buttons>
+
+	<ion-content class="padding background" overflow-scroll="true" animation="slide-left-right" ng-controller="utils">
+    <span style="margin-left:230px;">
+        
+            <select ng-model="sortType" style="padding:5px; margin-top:6px;">
+              <option value="" selected>show all</option>
+              <option value="dog">show dogs</option>
+              <option value="cat">show cats</option>
+            </select> 
+    </span>  
+        
+       
+        <div class="list" style="margin-top:-10px;">
+
+            <div ng-repeat="a in pets | filter: { type: sortType} " class="card row" style="padding: 0px !important;
+            height: 100px; ">
+                <div class="row " style="padding: 0px !important;" ng-click="openModal(a)">
+                    <div class="col col-33 " style="padding: 0px !important;">
+                        <img ng-src="{{a.image}}" class="image">
+                    </div >
+                    <div class="col col-66" style="padding-left:20px; !important">
+                        <h6 class="highlight" style="margin-bottom:5px !important; padding-top:0px; margin-top:0px; ">
+                            {{a.name |capitalize}}
+                        </h6>
+                        <p style="margin-top:0px; margin-bottom:0px; color:#504A61 !important;">{{a.desc}}</p>
+                        <p style="margin-top:0px; color:#504A61 !important;"> age: {{a.age}}</p>
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+	</ion-content> 
+
+    <script id="home-modal.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-nav-bar class="bar bar-header bar-royal">
+                <ion-nav-title>Adopt {{modal.data.name}}</ion-nav-title>
+                <ion-nav-buttons side="right">
+                  <button on-tap="closeModal()" class="button icon ion-close"></button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+            
+            <ion-content class="has-header">                
+                    <img ng-src="{{modal.data.image}}" style="max-width: 100%;">
+                <div>
+
+                    <h5 style="margin:15px !important; color: #212020;">
+                        {{modal.data.name | capitalize}},{{ modal.data.age | capitalize}}
+                    </h5>
+                    
+                    <h6 style="margin-left:15px !important; margin:0px; color: #212020;">
+                        About {{modal.data.name | capitalize}}:
+                    </h6>
+
+                    <p style="margin-left:20px !important; margin:0px; border:1px solid;
+                    border-radius:15px; height:50px; margin-top:5px;margin-right:10px;
+                    padding:10px;">
+                        {{ modal.data.desc | capitalize}}
+                    </p>
+                </div>
+                
+                <button class="button button-royal button-block" style="top: 57px;
+                " ng-click="adoptPet(modal.data.name)">Adopt</button>
+            </ion-content>
+        </ion-modal-view>
+    </script>
+
+</ion-view>

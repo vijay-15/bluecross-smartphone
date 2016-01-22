@@ -1,0 +1,33 @@
+<ion-view view-title="Volunteer" cache-view="true" enable-menu-with-back-views="false">
+   <ion-nav-buttons side="left">
+      <button ng-controller="utils" ng-click="go('/home')" class="button icon ion-android-arrow-back"></button>
+    </ion-nav-buttons>	
+    
+  <ion-content overflow-scroll="true" animation="slide-left-right">
+    	
+		<ionic-datepicker class="date-picker" input-obj="datepickerObject" style="display: block; width:100%">
+      <center>
+        <button class="button button-outline button-positive"> {{dateDisp || "SELECT A DATE"}}</button>
+      </center>
+    </ionic-datepicker>
+   
+    <div ng-repeat="activit in activities">
+      <div class="card">
+        <p>
+          <span class="highlight"> ACTIVITY: {{$index}}</span> 
+          <span>{{activit.activity | capitalize}},</span>
+        </p>
+        <p> 
+          <span class="highlight"> TIME:</span>
+          <span> {{activit.time | capitalize}},</span>
+        </p>
+        <p>
+          <span class="highlight"> VOLUNTEERS NEEDED:</span>
+          <span> {{activit.total_volunteer | capitalize}}</span>
+        </p>
+        <button class="button button-royal" ng-class="{ 'button-light' : selected[$index] }" ng-click="takepart(activit.id, $index); showAlert(activit.activity)">TAKE PART</button>
+      </div>
+    </div>  
+
+	</ion-content> 
+</ion-view>

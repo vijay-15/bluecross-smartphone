@@ -1,0 +1,52 @@
+<ion-view view-title="Profile" cache-view="true" enable-menu-with-back-views="false">
+   <ion-nav-buttons side="left">
+      <button ng-controller="utils" on-tap="go('home')" class="button icon ion-android-arrow-back"></button>
+    </ion-nav-buttons>
+
+    <ion-content overflow-scroll="true" animation="slide-left-right">
+	<center class="profile">
+	
+	</center>
+
+	<center>
+		<div>
+			<img class="user_cover" src="http://images6.fanpop.com/image/photos/33600000/Cute-	Dog-dogs-33698322-1024-768.jpg" alt="Profile Pic">
+		</div>
+		<div>
+			<button class="button button-stable button-outline">
+				Vijay
+			</button>
+		</div>
+	</center>
+
+	<div class="card">
+	<p style="margin-bottom:0px;">
+        <span class="highlight">ABOUT ME:</span>
+        <span> {{activit.desc | capitalize}}</span>
+    </p>
+    <p style="line-height: 4; margin-left: 12px;">
+    	hello i,am bla bla....
+    </p>
+
+		<p>
+          <span class="highlight"> AGE: {{$index}}</span> 
+          <span>{{activit.activity | capitalize}}</span>
+        </p>
+        <p> 
+          <span class="highlight"> GENDER:</span>
+          <span> {{activit.time | capitalize}}</span>
+        </p>
+        <p>
+          <span class="highlight">PETS OWNED:</span>
+          <span> {{activit.total_volunteer | capitalize}}</span>
+        </p>
+
+        <p>
+          <span class="highlight">LOCATION:</span>
+          <span> {{activit.location | capitalize}}</span>
+        </p>
+	</div>
+
+
+	</ion-content>
+</ion-view>

@@ -1,0 +1,42 @@
+ <ion-content>
+    <div class="list side-menu" ng-controller="utils">
+      <div class="side-menu-header">
+        <center style="padding-top: 50px; font-size: 25px;">
+          <span class="light" style="line-height: 2;font-weight: 400; color:#111 !important; opacity: 1 !important" ng-controller="homeController" ng-click="go('/login')">
+            {{namedisp || "Hello Thr!!"}}
+          </span>
+        </center>
+      </div>
+      <div class="ion-footer-bar" >
+        <button class="button button-aaa" style="width: 100%;" ng-click="go('/login')">
+          Login OR Create Account
+        </button>
+      </div>
+     <div class="item item-divider">
+       Activities
+     </div>
+     
+     <a menu-close class="item" ng-click="go('/volunteer')">
+       <i class="ion ion-ios-people"></i>Volunteer
+     </a>
+
+     <a menu-close class="item" ng-click="go('/complaint')">
+       <i class="ion-ios-paper"></i>Register a Complaint
+     </a>
+     
+     <a menu-close class="item" ng-click="go('/donate')">
+       <i class="ion ion-social-usd"></i>Donate to BCI
+     </a>
+
+      <div class="item item-divider">
+        Miscellaneous
+      </div>
+
+      <a menu-close class="item" ng-click="go('/about')">
+        <i class="ion ion-person-stalker"></i>About Us
+      </a>
+      <a menu-close class="item" ng-click="go('/contact')">
+        <i class="ion ion-android-call"></i>Contact Us
+      </a>
+    </div>
+  </ion-content>

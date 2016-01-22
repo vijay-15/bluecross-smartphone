@@ -1,0 +1,12 @@
+{
+  "name": "bluecrossofindia",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "bci-sass",
+    "watch"
+  ],
+   "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

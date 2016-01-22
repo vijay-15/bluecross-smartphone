@@ -1,0 +1,79 @@
+@import "partials/_colors";
+@import "partials/_typography";
+@import "partials/_utils";
+
+* {
+	font-family: $base-font;
+}
+
+
+/* Navigation Bar */
+
+.bar-header {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+/* Side Menu */
+
+.side-menu {
+	padding-top: 0 !important;
+}
+
+.side-menu-header {
+	background: #FF4081 url('../img/header.jpg');
+	background-size: cover;
+  	height: 200px;
+}
+
+/* Card */
+
+.card {
+
+	margin: 10px !important;
+	padding: 10px !important;
+	background: #FFF !important;
+	border-radius: 0px !important;
+
+	h2 {
+	    position: absolute;
+	    top: 50%;
+	    z-index: 2;
+	    width: 100%;
+	    text-align: center;
+	}
+}
+
+/* Complaint Page */
+
+.complaint {
+
+	.card {
+		padding: 15px !important;
+
+		.complaint-card-title {
+			font-family: $title-font;
+		}
+	}	
+
+	.complaint-input {
+		span.label {
+			font-size: 12px !important;
+		}
+	}
+
+}
+
+/* Donation Page */
+
+.donate-bci .card {
+  padding: 0 !important;
+}
+
+/* About BCI Page */
+
+.about-page {
+	p {
+		line-height: 2 !important;
+	}
+}

@@ -63,6 +63,14 @@ angular
                 url: '/user_profile',
                 templateUrl: 'views/user.html'
             })
+            .state('login', {
+                url: '/login',
+                templateUrl: 'views/login.html'
+            })
+            .state('account', {
+                url: '/account',
+                templateUrl: 'views/account.html'
+            })
         $urlRouterProvider.otherwise("/home");
 
 })

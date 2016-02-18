@@ -144,3 +144,23 @@ label .item {
   background-color: #0779BE !important;
   color: #FFF !important;
 }
+
+
+
+.hide {
+  display: none !important;
+}
+.login{
+  background: url(http://bestpetpics.com/wp-content/uploads/2015/03/Cute-Pets.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+
+
+}
+
+
+/*.platform-android .list:not(.card) .item.item-input.input-calm:after, .platform-override .list:not(.card) .item.item-input.input-calm:after {
+    background-color: #FFF !important; }
+
+/* End of Login */

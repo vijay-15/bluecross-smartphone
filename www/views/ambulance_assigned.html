@@ -5,20 +5,14 @@
 
 	<ion-content overflow-scroll="true" animation="slide-left-right">
         
-        <div class="card">
+        <div class="card" ng-repeat="v in vehicle">
            
           <center>
-              <br>
-              <img src="img/success_icon.png" />
-              <br><br>
-              <p>Ambulance on the way.
-              Details are as follows,</p>
-              <p>Vehicle No: {{vehicle.vehicleNumber}}</p>
-              <p>Driver Name: {{vehicle.driverName}}</p>
-              <p>Driver No: {{vehicle.driverContactNumber}}</p>
+              <p>VEHICLE NO: {{v.vehicleNumber}}</p>
+              <p>DRIVER NAME: {{v.driverName}}</p>
 
           </center>
-          <a href="tel: vehicle.driverContactNumber" class="button button-block button-balanced">
+          <a href="tel: v `.driverContactNumber" class="button button-block button-balanced">
               CONTACT DRIVER
           </a>
         </div>

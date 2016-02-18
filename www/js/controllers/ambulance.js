@@ -13,9 +13,13 @@ angular
 
 .module('bluecross.controllers')
 
-.controller('ambulanceController', function($scope, $state, $ionicLoading, $cordovaLocalStorage){
+.controller('ambulanceController', function($scope, $state, $ionicLoading, AmbulanceService){
 	
-	$scope.vehicle = JSON.parse($cordovaLocalStorage.getItem('ambulance')) || {};
+	$scope.vehicle = [];
+
+	AmbulanceService.getAmbulance().then(function(response){
+		$scope.vehicle = response.data;
+	})
 
 	// Hide the loader
 	$ionicLoading.hide();
